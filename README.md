@@ -24,4 +24,32 @@ Explain the difference between the methods and explain when you would choose one
 
 ### Response
 
-Add your response here...
+indexOf and findIndex are both methods used to find the position of an element in an array, but they work differently. IndexOf()  searches for an exact value in an array and returns its index. If the value is not found, it returns -1. It works best for simple values like numbers or strings. For example:
+
+```javascript
+const fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits.indexOf('banana')); 
+console.log(fruits.indexOf('orange'));
+
+```
+
+
+findIndex is more flexible because it uses a callback function to test each element. It returns the index of the first element that meets a condition. If the condition isn’t met, it returns -1. This is useful when working with objects or complex conditions.For example:
+```javascript
+const users = [
+  { name: 'zulka', age: 23 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 35 }
+];
+
+const index = users.findIndex(user => user.age < 30);
+console.log(index);
+
+```
+### When to Choose
+- Use indexOf for simple value searches.
+- Use findIndex when you need more complex conditions, like searching objects or ranges.
+
+
+
+
